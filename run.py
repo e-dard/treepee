@@ -24,4 +24,6 @@ if __name__ == '__main__':
     from pprint import PrettyPrinter
     pp = PrettyPrinter()
     pp.pprint(tree.tree)
+
+    print [(x[0]['target'], x[1]) for x in tree.classify(data)]
     

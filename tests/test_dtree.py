@@ -9,6 +9,13 @@ class TestDtree(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_frequencies(self):
+        """ Tests dtree.frequencies """
+        input_ = [1, 2, 2, 3]
+        expected = [(1, 1), (2, 2), (3, 1)]
+        actual = dtree.frequencies(input_)
+        self.assertEquals(set(expected), set(actual))
+
     def test_majority_vote(self):
         """ Tests dtree.majority_vote """
         input_ = [1, 2, 2, 3]
